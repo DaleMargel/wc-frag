@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Frag</title>
+		<meta charset="utf-8">
+		<style>
+			body { 
+				background-color: white;
+				font-family: sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>wc-frag</h1>
+		<p>An html fragment handler<br>
+		... basically pulls in body sections from other web pages</p>
+		<hr>
+		<wc-frag href="./test1.html" has="href"></wc-frag>
+		<hr>
+		<button onclick="setPage('./test1.html')">Page 1</button>
+		<button onclick="setPage('./test2.html')">Page 2</button>
+		<button onclick="setPage('./test12.html')">Page 1+2</button>
+		<button onclick="setPage('')">None</button>
+		<script>
+			function setPage(name){ document.querySelector("wc-frag").setAttribute('href',name) }
+		</script>
+		<script type="module" src="./src/wc-frag.js"></script>
+	</body>
+</html>
