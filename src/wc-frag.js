@@ -1,5 +1,5 @@
 let template = document.createElement('template');
-template.innerHTML = `<div></div>`;
+template.innerHTML = `<div></div>`; 
 
 class WcFrag extends HTMLElement {
 	constructor() { super();
